@@ -13,7 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        playFair: ['var(--font-play-fair-display)']
+        playFair: ['var(--font-play-fair-display)'],
+        times: ['"Times New Roman"', 'Times', 'serif'],
+        chomsky: ['Chomsky', 'serif'],
       }
     },
   },

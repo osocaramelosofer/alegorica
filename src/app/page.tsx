@@ -6,12 +6,13 @@ export default function Home() {
       <nav>
         <ul className="flex gap-x-2">
           <li>tienda</li>
+          <li>nuevo</li>
           <li>colecciones</li>
-          <li>carrito</li>
         </ul>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1 className="font-playFair text-2xl">alegorica</h1>
+        <h1 className="font-chomsky text-2xl font-normal">Alegorica</h1>
+        <h1 className="font-times text-2xl font-normal">Times New Roman</h1>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
