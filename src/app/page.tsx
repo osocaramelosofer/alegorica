@@ -1,10 +1,11 @@
+import { ProductCard } from "@/components/common/product-card";
 import { SpinningText } from "@/components/ui/spinning-text";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_500px_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
-      <nav>
+      <nav className="">
         <ul className="flex gap-x-5 items-center">
           <li>
             <span className="font-chomsky text-2xl font-normal">Alegorica</span>
@@ -22,10 +23,15 @@ export default function Home() {
           </div>
           <span className="md:ml-10 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
       </main>
-      <section>
-        <h2 className="font-times text-6xl">Prendas</h2>
+      <section className="row-start-3 h-full w-full">
+        <h2 className="font-times text-6xl text-center mb-10">Prendas</h2>
+        <div className="grid grid-cols-3 ">
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+        </div>
       </section>
-      <footer className="flex gap-6 flex-wrap items-center justify-center">
+      <footer className="flex row-start-4 h-full gap-6 flex-wrap items-center justify-center">
       <div className="mr-10">
               <SpinningText
                   radius={4.5}
