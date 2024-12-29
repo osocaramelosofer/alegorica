@@ -10,18 +10,17 @@ export default function Home() {
             <span className="font-chomsky text-2xl font-normal">Alegorica</span>
           </li>
           <li>tienda</li>
-          <li>nuevo</li>
           <li>colecciones</li>
         </ul>
       </nav>
-      <main className="relative flex flex-col gap-8 row-start-2 items-center sm:items-start w-full h-full">
+      <main className="relative flex flex-col row-start-2 items-center sm:items-start w-full h-full">
         {/* <div className="absolute inset-0 bg-black ">
         </div> */}
       
-          <div className="bg-opacity-50 flex w-full justify-center items-center absolute  h-full">
-            <span className="font-chomsky text-[30vw] font-normal   tracking-tighter" aria-hidden>alegórica</span>
+          <div className="flex w-full h-full items-center ">
+            <span className="leading-tight font-chomsky text-[30vw] font-normal tracking-tighter pointer-events-none" aria-hidden>alegórica</span>
           </div>
-          <h2 className="font-playFair text-black" >Sé parte del club</h2>
+          <span className="md:ml-10 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
       </main>
       <section>
         <h2 className="font-times text-6xl">Prendas</h2>
