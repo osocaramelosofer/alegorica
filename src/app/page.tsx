@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ProductCard } from "@/components/common/product-card";
 import { SpinningText } from "@/components/ui/spinning-text";
 import Image from "next/image";
@@ -16,10 +17,13 @@ export default function Home() {
         </ul>
       </nav>
       <main className="relative flex flex-col row-start-2 items-center sm:items-start w-full h-full">
+        <div className="h-auto w-[60vw] absolute right-0 translate-x-1/4 -bottom-20 ">
+          <img src="/images/hero-img.webp" alt="walter" className="h-full w-full object-cover" />
+        </div>
           <div className="flex w-full h-full items-center ">
             <span className="leading-tight font-chomsky text-[30vw] font-normal tracking-tighter pointer-events-none select-none" aria-hidden>alegórica</span>
           </div>
-          <span className="md:ml-10 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
+          <span className="md:ml-10 mr-20 md:mr-0 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
       </main>
       <section className="row-start-3 h-full w-full">
         <h2 className="text-6xl text-center mb-10 font-times ">Prendas</h2>
