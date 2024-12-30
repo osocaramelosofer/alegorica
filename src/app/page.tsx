@@ -4,14 +4,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_500px_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
+    <div className="bg-amber-100/20 grid grid-rows-[20px_1fr_auto_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
       <nav className="">
-        <ul className="flex gap-x-5 items-center">
-          <li>
-            <span className="font-chomsky text-2xl font-normal">Alegorica</span>
+        <ul className="flex gap-x-2 md:gap-x-10 md:text-2xl text-sm items-center font-times uppercase leading-10">
+          <li className="font-chomsky text-2xl md:text-5xl font-normal normal-case">
+            Alegorica
           </li>
           <li>tienda</li>
-          <li>colecciones</li>
+          <li>nosotros</li>
+          <li>galería</li>
         </ul>
       </nav>
       <main className="relative flex flex-col row-start-2 items-center sm:items-start w-full h-full">
@@ -21,8 +22,11 @@ export default function Home() {
           <span className="md:ml-10 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
       </main>
       <section className="row-start-3 h-full w-full">
-        <h2 className="font-times text-6xl text-center mb-10">Prendas</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3">
+        <h2 className="text-6xl text-center mb-10 font-times ">Prendas</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3 min-h-max">
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>
@@ -52,7 +56,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Follow us →
+          Siguenos →
         </a>
       </footer>
     </div>
