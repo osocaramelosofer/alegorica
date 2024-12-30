@@ -15,11 +15,8 @@ export default function Home() {
         </ul>
       </nav>
       <main className="relative flex flex-col row-start-2 items-center sm:items-start w-full h-full">
-        {/* <div className="absolute inset-0 bg-black ">
-        </div> */}
-      
           <div className="flex w-full h-full items-center ">
-            <span className="leading-tight font-chomsky text-[30vw] font-normal tracking-tighter pointer-events-none" aria-hidden>alegórica</span>
+            <span className="leading-tight font-chomsky text-[30vw] font-normal tracking-tighter pointer-events-none select-none" aria-hidden>alegórica</span>
           </div>
           <span className="md:ml-10 font-playFair text-black font-extrabold text-xl md:text-4xl italic" >Sé parte del club</span>
       </main>
