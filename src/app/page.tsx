@@ -25,13 +25,13 @@ export default function Home() {
       </main>
       <section className="row-start-3 h-full w-full">
         <h2 className="font-times text-6xl text-center mb-10">Prendas</h2>
-        <div className="grid grid-cols-3 ">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3">
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>
         </div>
       </section>
-      <footer className="flex row-start-4 h-full gap-6 flex-wrap items-center justify-center">
+      <footer className="flex row-start-5 h-full gap-6 flex-wrap items-center justify-center">
       <div className="mr-10">
               <SpinningText
                   radius={4.5}
@@ -41,39 +41,10 @@ export default function Home() {
               {`alegorica • alegorica • `}
               </SpinningText>  
             </div>
+
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Discover
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Collection
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.instagram.com/alegoricaclub/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,7 +55,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          About us →
+          Follow us →
         </a>
       </footer>
     </div>

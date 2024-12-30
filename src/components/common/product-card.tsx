@@ -49,7 +49,7 @@ import {
             </button>
           </div>
         </MorphingDialogTrigger>
-        <MorphingDialogContainer>
+        <MorphingDialogContainer className='bg-zinc-500/40'>
           <MorphingDialogContent
             style={{
               borderRadius: '24px',
@@ -96,7 +96,7 @@ import {
                 </a>
               </MorphingDialogDescription>
             </div>
-            <MorphingDialogClose className='text-zinc-50' />
+            <MorphingDialogClose className='text-zinc-500' />
           </MorphingDialogContent>
         </MorphingDialogContainer>
       </MorphingDialog>
