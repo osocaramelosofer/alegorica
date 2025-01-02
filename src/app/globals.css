@@ -10,8 +10,8 @@ body,
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "Chomsky";
-  src: url("../fonts/Chomsky.otf") format("truetype");
+  font-family: 'Chomsky';
+  src: url('../fonts/Chomsky.otf') format('truetype');
 }
 @layer base {
   :root {

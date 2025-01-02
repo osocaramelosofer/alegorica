@@ -1,36 +1,36 @@
-'use client';
-import { cn } from '@/lib/utils';
-import { motion, Transition, Variants } from 'motion/react';
-import React, { CSSProperties } from 'react';
+'use client'
+import { cn } from '@/lib/utils'
+import { motion, Transition, Variants } from 'motion/react'
+import React, { CSSProperties } from 'react'
 
 type SpinningTextProps = {
-  children: string;
-  style?: CSSProperties;
-  duration?: number;
-  className?: string;
-  reverse?: boolean;
-  fontSize?: number;
-  radius?: number;
-  transition?: Transition;
+  children: string
+  style?: CSSProperties
+  duration?: number
+  className?: string
+  reverse?: boolean
+  fontSize?: number
+  radius?: number
+  transition?: Transition
   variants?: {
-    container?: Variants;
-    item?: Variants;
-  };
-};
+    container?: Variants
+    item?: Variants
+  }
+}
 
 const BASE_TRANSITION = {
   repeat: Infinity,
-  ease: 'linear',
-};
+  ease: 'linear'
+}
 
 const BASE_ITEM_VARIANTS = {
   hidden: {
-    opacity: 1,
+    opacity: 1
   },
   visible: {
-    opacity: 1,
-  },
-};
+    opacity: 1
+  }
+}
 
 export function SpinningText({
   children,
@@ -41,44 +41,44 @@ export function SpinningText({
   fontSize = 1,
   radius = 5,
   transition,
-  variants,
+  variants
 }: SpinningTextProps) {
-  const letters = children.split('');
-  const totalLetters = letters.length;
+  const letters = children.split('')
+  const totalLetters = letters.length
 
   const finalTransition = {
     ...BASE_TRANSITION,
     ...transition,
-    duration: (transition as { duration?: number })?.duration ?? duration,
-  };
+    duration: (transition as { duration?: number })?.duration ?? duration
+  }
 
   const containerVariants = {
     visible: { rotate: reverse ? -360 : 360 },
-    ...variants?.container,
-  };
+    ...variants?.container
+  }
 
   const itemVariants = {
     ...BASE_ITEM_VARIANTS,
-    ...variants?.item,
-  };
+    ...variants?.item
+  }
 
   return (
     <motion.div
       className={cn('relative', className)}
       style={{
-        ...style,
+        ...style
       }}
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
       transition={finalTransition}
     >
       {letters.map((letter, index) => (
         <motion.span
-          aria-hidden='true'
+          aria-hidden="true"
           key={`${index}-${letter}`}
           variants={itemVariants}
-          className='absolute left-1/2 top-1/2 inline-block'
+          className="absolute left-1/2 top-1/2 inline-block"
           style={
             {
               '--index': index,
@@ -91,14 +91,14 @@ export function SpinningText({
                   rotate(calc(360deg / var(--total) * var(--index)))
                   translateY(calc(var(--radius, 5) * -1ch))
                 `,
-              transformOrigin: 'center',
+              transformOrigin: 'center'
             } as React.CSSProperties
           }
         >
           {letter}
         </motion.span>
       ))}
-      <span className='sr-only'>{children}</span>
+      <span className="sr-only">{children}</span>
     </motion.div>
-  );
+  )
 }
