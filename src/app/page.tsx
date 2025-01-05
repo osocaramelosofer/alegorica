@@ -38,14 +38,8 @@ export default function Home() {
       </main>
       <section className="row-start-3 h-full w-full">
         <h2 className="text-6xl text-center mb-10 font-times ">Prendas</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3 min-h-max">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
+
+        <Catalogue />
       </section>
       <footer className="flex row-start-5 h-full gap-6 flex-wrap items-center justify-center">
         <div className="mr-10">
