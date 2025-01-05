@@ -9,9 +9,20 @@ import {
   MorphingDialogDescription,
   MorphingDialogContainer
 } from '@/components/ui/morphing-dialog'
+import { formatCurrencyMXN } from '@/lib/utils/currency'
 import { PlusIcon } from 'lucide-react'
-
-export function ProductCard() {
+interface ProductCardProps {
+  name: string
+  description: string
+  coverImage: string
+  price: number
+}
+export function ProductCard({
+  name,
+  description,
+  coverImage,
+  price
+}: ProductCardProps) {
   return (
     <MorphingDialog
       transition={{
@@ -27,17 +38,17 @@ export function ProductCard() {
         className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
       >
         <MorphingDialogImage
-          src="https://fairvilleclothing.com/cdn/shop/files/10783106944700397598_2048.jpg?v=1728611428&width=1100"
+          src={coverImage}
           alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
           className="h-48 w-full object-cover"
         />
         <div className="flex flex-grow flex-row items-end justify-between p-2">
           <div>
             <MorphingDialogTitle className="text-zinc-950 dark:text-zinc-50">
-              EB27
+              {name}
             </MorphingDialogTitle>
             <MorphingDialogSubtitle className="text-zinc-700 dark:text-zinc-400">
-              Edouard Wilfrid Buquet
+              {formatCurrencyMXN(price)}
             </MorphingDialogSubtitle>
           </div>
           <button
@@ -54,19 +65,19 @@ export function ProductCard() {
           style={{
             borderRadius: '24px'
           }}
-          className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[500px]"
+          className="pointer-events-auto relative flex h-auto w-full flex-col overflow-auto border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[500px]"
         >
           <MorphingDialogImage
-            src="https://fairvilleclothing.com/cdn/shop/files/10783106944700397598_2048.jpg?v=1728611428&width=1100"
+            src={coverImage}
             alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
             className="h-full w-full"
           />
           <div className="p-6">
             <MorphingDialogTitle className="text-2xl text-zinc-950 dark:text-zinc-50">
-              EB27
+              {name}
             </MorphingDialogTitle>
             <MorphingDialogSubtitle className="text-zinc-700 dark:text-zinc-400">
-              Edouard Wilfrid Buquet
+              {formatCurrencyMXN(price)}
             </MorphingDialogSubtitle>
             <MorphingDialogDescription
               disableLayoutAnimation
@@ -77,14 +88,7 @@ export function ProductCard() {
               }}
             >
               <p className="mt-2 text-zinc-500 dark:text-zinc-500">
-                Little is known about the life of Édouard-Wilfrid Buquet. He was
-                born in France in 1866, but the time and place of his death is
-                unfortunately a mystery.
-              </p>
-              <p className="text-zinc-500">
-                Research conducted in the 1970s revealed that he’d designed the
-                “EB 27” double-arm desk lamp in 1925, handcrafting it from
-                nickel-plated brass, aluminium and varnished wood.
+                {description}
               </p>
               <a
                 className="mt-2 inline-flex text-zinc-500 underline"
