@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="bg-amber-100/20 grid grid-rows-[20px_1fr_auto_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
+    <div className="overflow-hidden bg-amber-100/20 grid grid-rows-[20px_1fr_auto_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
       <nav className="">
         <ul className="flex gap-x-2 md:gap-x-10 md:text-2xl text-sm items-center font-times uppercase leading-10">
           <li className="font-chomsky text-2xl md:text-5xl font-normal normal-case">
@@ -17,7 +17,7 @@ export default function Home() {
         </ul>
       </nav>
       <main className="relative flex flex-col row-start-2 items-center sm:items-start w-full h-full">
-        <div className="h-auto w-[60vw] absolute right-0 translate-x-1/4 -bottom-20 ">
+        <div className="h-auto w-[60vw] absolute right-0 translate-x-1/4 -bottom-20">
           <img
             src="/images/hero-img.webp"
             alt="walter"
