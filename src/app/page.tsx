@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { ProductCard } from '@/components/common/product-card'
+import Catalogue from '@/components/products/catalogue'
 import { SpinningText } from '@/components/ui/spinning-text'
 import Image from 'next/image'
 
