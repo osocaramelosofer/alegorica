@@ -4,8 +4,7 @@ import { createClient } from '@/lib/supabase/server'
 export default async function Catalogue() {
   const supabase = await createClient()
 
-  const { data: products, error } = await supabase.from('products').select('*')
-  console.log(products)
+  const { data: products } = await supabase.from('products').select('*')
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3 min-h-max">
       {products?.map((product) => {

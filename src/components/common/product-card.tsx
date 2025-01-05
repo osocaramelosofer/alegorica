@@ -90,14 +90,6 @@ export function ProductCard({
               <p className="mt-2 text-zinc-500 dark:text-zinc-500">
                 {description}
               </p>
-              <a
-                className="mt-2 inline-flex text-zinc-500 underline"
-                href="https://www.are.na/block/12759029"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Are.na block
-              </a>
             </MorphingDialogDescription>
           </div>
           <MorphingDialogClose className="text-zinc-500" />
