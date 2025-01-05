@@ -17,7 +17,7 @@ import {
   Variant
 } from 'motion/react'
 import { createPortal } from 'react-dom'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils/utils'
 import useClickOutside from '@/hooks/useClickOutside'
 import { XIcon } from 'lucide-react'
 
@@ -175,7 +175,7 @@ function MorphingDialogContent({
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('overflow-hidden')
+      document.body.classList.add('overflow-auto')
       const focusableElements = containerRef.current?.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       )
@@ -202,7 +202,7 @@ function MorphingDialogContent({
     <motion.div
       ref={containerRef}
       layoutId={`dialog-${uniqueId}`}
-      className={cn('overflow-hidden', className)}
+      className={cn('', className)}
       style={style}
       role="dialog"
       aria-modal="true"
