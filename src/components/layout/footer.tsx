@@ -1,9 +1,18 @@
+import { cn } from '@/lib/utils/utils'
 import { SpinningText } from '../ui/spinning-text'
 import Image from 'next/image'
 
-export default function Footer() {
+interface FooterProps {
+  className: string
+}
+export default function Footer({ className }: FooterProps) {
   return (
-    <footer className="flex row-start-5 h-full gap-6 flex-wrap items-center justify-center">
+    <footer
+      className={cn(
+        'flex row-start-5 h-full gap-6 flex-wrap items-center justify-center',
+        className
+      )}
+    >
       <div className="mr-10">
         <SpinningText
           radius={4.5}
