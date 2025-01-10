@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${playFairDisplay.variable} antialiased  bg-amber-100/20`}
+        className={` ${playFairDisplay.variable} antialiased  bg-[#FEFAF4]`}
       >
         <div className="overflow-hidden grid grid-rows-[40px_auto_auto] items-center justify-items-center min-h-screen gap-12 md:gap-16 p-8 pb-20 sm:p-20 ">
           <Navbar className="row-start-1" />
