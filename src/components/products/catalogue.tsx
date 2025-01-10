@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/common/product-card'
+import { ProductCard } from '@/components/products/product-card'
 import { createClient } from '@/lib/supabase/server'
 
 export default async function Catalogue() {
