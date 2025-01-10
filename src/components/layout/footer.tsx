@@ -6,9 +6,9 @@ interface FooterProps {
 }
 export default function Footer({ className }: FooterProps) {
   return (
-    <footer className={cn(' row-start-5 h-full gap-6 w-full mt-32', className)}>
-      <div className="flex justify-between">
-        <div className="h-32">
+    <footer className={cn(' row-start-5 h-full gap-6 w-full ', className)}>
+      <div className="flex justify-between h-full">
+        <div className="h-32 self-end">
           <img
             className="w-full h-full object-cover"
             src="/images/enamorados-encuerados-logo.webp"

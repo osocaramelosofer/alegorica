@@ -9,7 +9,7 @@ export default function Home() {
           <div>
             <img src="/images/alegorica-logo.webp" alt="alegorica" />
           </div>
-          <span className="font-playFair text-3xl/9 self-start mt-5">
+          <span className="font-playFair text-lg md:text-3xl/9  self-start mt-5">
             Un lienzo, al tacto de tu piel. <br />
             Piezas únicas, historias auténticas. <br />
             Sé parte del Club.
